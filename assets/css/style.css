@@ -17,3 +17,53 @@ body {
 
 /* Add additional styles for specific elements or classes as needed */
 
+/* Container element */
+
+.container {
+    
+}
+/* Style for create task button */
+
+#createTaskBtn{
+
+
+}
+
+/* Style for colums section */
+
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    
+}
+
+/* Style for column element */
+
+.colum {
+
+
+}
+
+/* Style for task status type */
+
+#todo{
+
+
+}
+
+#inProgress{}
+
+#done{}
+
+/* Style for the elements of the colums depending on the status*/
+
+#todoList{}
+
+#inProgressList{}
+
+#doneList{}
+
+
+
