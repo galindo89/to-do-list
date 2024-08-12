@@ -1,15 +1,18 @@
 
-body {
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Set a background color and font styles */
+body {
     background: #b9422d;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-
-
 }
+
+/* Add additional styles for specific elements or classes as needed */
