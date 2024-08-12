@@ -8,7 +8,7 @@
 
 /* Set a background color and font styles */
 body {
-    background: #b9422d;
+    background:gray;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -20,6 +20,12 @@ body {
 /* Container element */
 
 .container {
+
+    width:90%;  
+
+
+
+
     
 }
 /* Style for create task button */
@@ -34,14 +40,22 @@ body {
 
 .columns {
     display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+    justify-content: column;
+    align-items: center;
+   
     
 }
 
 /* Style for column element */
 
-.colum {
+.column {
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:0 10px;
+    margin-bottom: 20px;
 
 
 }
