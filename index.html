@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>My To-Do List</title>
 </head>
+
 <body>
     <h1>My To-Do List</h1>
-    <div class="newtask">
-        <button class="" id="btnnewtask">Ad Task</button>
+
+    <!--This is the container that will contain the colums, and the button to create a task-->
+    
+    <div class="container">
+        <button class="" id="createTaskBtn">Create New Task</button>
+
+        <!-- This is the container that will contain the 3 columns representing the status of the tasks -->
+
+        <div class="columns">Here we will have the columns
+
+            <!-- This is the column where the tasks will be added -->
+            <div class="column" id="todo">
+                <h2>To Do</h2>
+                <ul id="todoList">
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+
+                </ul>
+
+            </div>
+            <div class="column" id="inProgresss">
+                <h2>In Progress</h2>
+                <ul id="inProgressList">
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+
+            </div>
+            <div class="column" id="done">
+                <h2>Done</h2>
+                <ul id="doneList">
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                </ul>
+
+            </div>
+        </div>
     </div>
-    <div class="columns">Here we will have the columns</div>
-    <div class="column">
-        <h2>Column 1</h2>
-        <ul>
-            <li>Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
-        </ul>
-
-    </div>
-    <div class="column">
-        <h2>Column 2</h2>
-        <ul>
-            <li>Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
-        </ul>
-
-    </div>
-    <div class="column">
-        <h2>Column 3</h2>
-        <ul>
-            <li>Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
-        </ul>
-
-    </div>
 
 
 
-   
+
     <script src="/assets/js/script.js"></script>
 </body>
+
 </html>
