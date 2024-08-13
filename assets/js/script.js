@@ -28,4 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    //close modal when the user clicks outside of it
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+  
+    
+
 });

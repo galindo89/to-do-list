@@ -147,7 +147,7 @@ li .task-content {
     
 }
 
-.modal-content{
+.modalContent{
     background-color: white;
     margin: 10% auto; 
     padding: 20px;
@@ -159,7 +159,12 @@ li .task-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
+}
+
+.modalContent label{
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .close {
