@@ -159,6 +159,7 @@ li .task-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-weight: bold;
 }
 
 .close {
