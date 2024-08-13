@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
 }
 
 /* Set a background color and font styles */
@@ -48,6 +48,10 @@ body {
     font-size: 16px;
 
 
+}
+
+#createTaskBtn:hover {
+    background-color: #218838;
 }
 
 /* Style for colums section */
