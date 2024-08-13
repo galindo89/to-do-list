@@ -57,8 +57,23 @@
     </div>
 
     <!-- This is the modal that will pop up when the user clicks on the create task button -->
-    
-    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Task</h2>
+            <label for="modalTaskInput">Task</label>
+            <input type="text" id="modalTaskInput" placeholder="Add a new task">
+            <label for="modalTaskDate">Date</label>
+            <input type="date" id="modalTaskDate">
+            <label for="modalTaskStatus">Status</label>
+            <select id="modalTaskStatus">
+                <option value="backlog">Backlog</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+    </div>
 
 
 

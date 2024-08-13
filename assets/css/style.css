@@ -132,6 +132,12 @@ li .task-content {
 
 #doneList{}
 
+/* Style for the modal title */
+
+.modal{
+   display: none;
+}
+
 /* Style for table screen sizes */
 
 @media (min-width: 481px) {
