@@ -161,12 +161,15 @@ li .task-content {
     gap: 10px;
 }
 
-.close{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
+.close {
+        color: #aaa;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 28px;
+        font-weight: bold;
 }
+
 /* Style for table screen sizes */
 
 @media (min-width: 481px) {
