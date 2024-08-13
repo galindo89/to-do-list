@@ -37,38 +37,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Creating an event listener that listens for a click on the add task button. This will add a task to the task list
 
-  addTaskBtn.addEventListener('click', function () {
-      const taskText = modalTaskInput.value;
-      const dueDate = mondalTaskDate.value;
-      const status = modalTaskStatus.value;
+    addTaskBtn.addEventListener('click', function () {
+        const taskText = modalTaskInput.value;
+        const dueDate = mondalTaskDate.value;
+        const status = modalTaskStatus.value;
 
         //Creating a new task element
 
-        if (taskText !=='' && dueDate !== '') {
+        if (taskText !== '' && dueDate !== '') {
 
-            createTaskItem(taskText, dueDate, status);
+            const taskItem = createTaskItem(taskText, dueDate, status);
 
-            // need to adda a function here
-            
-        } 
-        // we need to improve this. 
+            addTaskToColumn(taskItem, status);
+
+            //Close the modal and clear the input fields
+
+            modal.style.display = 'none';
+            modalTaskInput.value = '';
+            mondalTaskDate.value = '';
+            modalTaskStatus.value = 'backlog';
+
+
+
+        }
+
         else {
             alert('Please enter a task and due date');
         }
 
-        
-  });
+
+    });
 
 
-  //Creating a function that will add a task to the task list
+    //Creating a function that will add a task to the task list
 
-function createTaskItem(taskText, dueDate, status) {
+    function createTaskItem(taskText, dueDate, status) {
         const taskItem = document.createElement('li');
-            taskItem.classList.add('task-item');
-            const taskTitle = document.createElement('h3');
-            taskTitle.textContent = taskText;
-            taskItem.appendChild(taskTitle);
+        taskItem.classList.add('task-item');
+        taskItem.textContent = taskText;
+       
+
+        return taskItem;
+    }
+
+    //Creating a function that will add a task to the correct column
+
+
+    function addTaskToColumn(taskItem, status) {
+        if (status === 'backlog') {
             document.getElementById('todoList').appendChild(taskItem);
-}   
+        }
+        else if (status === 'in-progress') {
+            document.getElementById('inProgressList').appendChild(taskItem);
+        }
+        else if (status === 'done') {
+            document.getElementById('doneList').appendChild(taskItem);
+        }
+
+        else {
+            console.error('There has been an error adding the task to the column');
+        }
+
+
+
+    }
 
 });
