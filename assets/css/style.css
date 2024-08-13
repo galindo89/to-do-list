@@ -184,7 +184,8 @@ li .task-content {
 }
 
 .modalContent button {
-   
+
+    align-self: flex-end;
     padding: 10px 20px;
     background-color: #28a745;
     color: white;
