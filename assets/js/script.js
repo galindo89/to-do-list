@@ -35,7 +35,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-  
-    
+    //Creating an event listener that listens for a click on the add task button. This will add a task to the task list
+
+  addTaskBtn.addEventListener('click', function () {
+      const taskText = modalTaskInput.value;
+      const dueDate = mondalTaskDate.value;
+      const status = modalTaskStatus.value;
+
+        //Creating a new task element
+
+        if (taskText !=='' && dueDate !== '') {
+
+            createTaskItem(taskText, dueDate, status);
+
+            // need to adda a function here
+            
+        } else {
+            alert('Please enter a task and due date');
+        }
+
+        
+  });
+
+
+  //Creating a function that will add a task to the task list
+
+function createTaskItem(taskText, dueDate, status) {
+        const taskItem = document.createElement('li');
+            taskItem.classList.add('task-item');
+            const taskTitle = document.createElement('h3');
+            taskTitle.textContent = taskText;
+            taskItem.appendChild(taskTitle);
+            document.getElementById('todoList').appendChild(taskItem);
+}   
 
 });
