@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // need to adda a function here
             
-        } else {
+        } 
+        // we need to improve this. 
+        else {
             alert('Please enter a task and due date');
         }
 
