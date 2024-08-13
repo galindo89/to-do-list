@@ -183,6 +183,20 @@ li .task-content {
     border-radius: 5px;
 }
 
+.modalContent button {
+   
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
 /* Style for table screen sizes */
 
 @media (min-width: 481px) {
