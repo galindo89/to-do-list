@@ -224,6 +224,20 @@ li .task-content {
         width: 30%;
         margin: 0 10px; /* Add margin on left and right */
     }
+
+    .close:hover{
+        color: black;
+        
+
+    }
+
+    .modalContent button:hover {
+        background-color: #218838;
+    }
+
+
+
+
 }
 
 
