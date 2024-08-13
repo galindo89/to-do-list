@@ -176,6 +176,13 @@ li .task-content {
         font-weight: bold;
 }
 
+.modalContent input,  .modalContent select {
+   
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 /* Style for table screen sizes */
 
 @media (min-width: 481px) {
