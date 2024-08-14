@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const mondalTaskDate = document.getElementById('modalTaskDate');
     const modalTaskStatus = document.getElementById('modalTaskStatus');
 
+    //Loading tasks from local storage
+
+    loadTasks();    
+
 
     //Creating an event listener that listens for a click on the create task button. This will show the modal
 
@@ -49,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const taskItem = createTaskItem(taskText, dueDate, status);
 
             addTaskToColumn(taskItem, status);
+            saveTasksToLocalStorage();
+
 
             //Close the modal and clear the input fields
 
@@ -113,19 +119,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         deleteTaskBtn.addEventListener('click', function () {
 
-            // Remove the task from the list. This function is compatilbe with all browsers
+           
             taskItem.parentNode.removeChild(taskItem);
+            saveTasksToLocalStorage();
         });
 
-        // Calculating the number of days left to complete the task
-
-    
-
-
-       console.log(daysLeft);
-        
+                
         return taskItem;
     }
+
+    //function to save the task to the local storage
+
 
     //Creating a function that will add a task to the correct column
 
@@ -157,6 +161,31 @@ document.addEventListener('DOMContentLoaded', function () {
         const timeDifference = dueDateObj.getTime() - currentDate.getTime();
         const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
         return daysLeft;
+    }
+
+    //function to load tasks from local storage
+    function loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.forEach(task => {
+            const taskItem = createTaskItem(task.text, task.dueDate, task.status);
+            addTaskToColumn(taskItem, task.status);
+        });
+    }
+
+    
+
+     // Function to save tasks to local storage
+     // Function to save tasks to local storage
+     function saveTasksToLocalStorage() {
+        const tasks = [];
+        document.querySelectorAll('.column ul li').forEach(taskItem => {
+            const taskContent = taskItem.querySelector('.task-content');
+            const text = taskContent.querySelector('span:nth-child(1)').textContent.trim();
+            const dueDate = taskContent.querySelector('span:nth-child(2)').textContent;
+            const status = taskContent.querySelector('span:nth-child(3)').textContent;
+            tasks.push({ text, dueDate, status });
+        });
+        localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
     
