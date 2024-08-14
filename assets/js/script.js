@@ -73,10 +73,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createTaskItem(taskText, dueDate, status) {
         const taskItem = document.createElement('li');
-        taskItem.classList.add('task-item');
-        taskItem.textContent = taskText;
-
-
+        const taskContent = document.createElement('div');
+        taskContent.classList.add('task-content');
+        const taskTextSpan = document.createElement('span');
+        const taskDueDateSpan = document.createElement('span');
+        const statusSpan = document.createElement('span');
+        taskTextSpan.textContent = taskText;
+        taskDueDateSpan.textContent = dueDate;
+        statusSpan.textContent = status;
+        taskContent.appendChild(taskTextSpan);
+        taskContent.appendChild(taskDueDateSpan);
+        taskContent.appendChild(statusSpan);
+        taskItem.appendChild(taskContent);
+        
         return taskItem;
     }
 
