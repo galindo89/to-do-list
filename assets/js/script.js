@@ -78,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const taskTextSpan = document.createElement('span');
         const taskDueDateSpan = document.createElement('span');
         const statusSpan = document.createElement('span');
+        const deleteTask = document.createElement('div');
+        deleteTask.classList.add('delete-task');
+        const deleteTaskSpan = document.createElement('span');
+
         taskTextSpan.textContent = taskText;
         taskDueDateSpan.textContent = dueDate;
         statusSpan.textContent = status;
@@ -85,6 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
         taskContent.appendChild(taskDueDateSpan);
         taskContent.appendChild(statusSpan);
         taskItem.appendChild(taskContent);
+        deleteTaskSpan.textContent = 'delete';
+        deleteTask.appendChild(deleteTaskSpan);
+        taskItem.appendChild(deleteTask);
+
+        deleteTask.addEventListener('click', function () {
+            taskItem.remove();
+        });
         
         return taskItem;
     }
@@ -111,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    //Creating a function that will allow the user to drag and drop tasks between columns
+    
 
        
 

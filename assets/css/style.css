@@ -102,7 +102,6 @@ li{
 
     /*this may not be necessary*/
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -112,6 +111,13 @@ li .task-content {
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+/* Style for delete task section */
+
+li .delete-task {
+    display: flex;
+    gap: 5px;
 }
 
 
