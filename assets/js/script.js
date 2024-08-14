@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const statusSpan = document.createElement('span');
         const deleteTask = document.createElement('div');
         deleteTask.classList.add('delete-task');
-        const deleteTaskSpan = document.createElement('span');
+        const deleteTaskBtn = document.createElement('i');
+        deleteTaskBtn.classList.add('fa-solid', 'fa-trash');
 
         taskTextSpan.textContent = taskText;
         taskDueDateSpan.textContent = dueDate;
@@ -89,11 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
         taskContent.appendChild(taskDueDateSpan);
         taskContent.appendChild(statusSpan);
         taskItem.appendChild(taskContent);
-        deleteTaskSpan.textContent = 'delete';
-        deleteTask.appendChild(deleteTaskSpan);
+        deleteTask.appendChild(deleteTaskBtn);
         taskItem.appendChild(deleteTask);
 
-        deleteTaskSpan.addEventListener('click', function () {
+        deleteTaskBtn.addEventListener('click', function () {
 
             // Remove the task from the list. This function is compatilbe with all browsers
             taskItem.parentNode.removeChild(taskItem);
