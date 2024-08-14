@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const taskItem = document.createElement('li');
         taskItem.classList.add('task-item');
         taskItem.textContent = taskText;
-       
+
 
         return taskItem;
     }
@@ -102,4 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    //Creating a function that will allow the user to drag and drop tasks between columns
+
+       
+
 });
+
+
