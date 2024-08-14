@@ -83,6 +83,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const deleteTaskBtn = document.createElement('i');
         deleteTaskBtn.classList.add('fa-solid', 'fa-trash');
 
+        //Calculating the number of days left to complete the task
+
+        const daysLeft= calculateDaysLeft(dueDate);
+
+        //Changing the background color of the task based on the number of days left to complete the task
+
+        if (daysLeft <=2 && (status === 'backlog' || status === 'in-progress')) {
+            taskItem.style.background = 'lightcoral';
+        }
+        else if (daysLeft >2 && daysLeft <7 && (status === 'backlog' || status === 'in-progress')) {
+            taskItem.style.background = 'lightyellow';
+        }
+        else if (daysLeft >=7 && (status === 'backlog' || status === 'in-progress')) {
+            taskItem.style.background = 'lightgreen';
+        }
+
         taskTextSpan.textContent = taskText;
         taskDueDateSpan.textContent = dueDate;
         statusSpan.textContent = status;
@@ -98,6 +114,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // Remove the task from the list. This function is compatilbe with all browsers
             taskItem.parentNode.removeChild(taskItem);
         });
+
+        // Calculating the number of days left to complete the task
+
+    
+
+
+       console.log(daysLeft);
         
         return taskItem;
     }
@@ -121,7 +144,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
 
+    }
 
+    //function to calculate the number of days left to complete a task
+
+    function calculateDaysLeft(dueDate) {
+        const currentDate = new Date();
+        const dueDateArray = dueDate.split('-');
+        const dueDateObj = new Date(dueDateArray[0], dueDateArray[1] - 1, dueDateArray[2]);
+        const timeDifference = dueDateObj.getTime() - currentDate.getTime();
+        const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+        return daysLeft;
     }
 
     
