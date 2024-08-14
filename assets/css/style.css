@@ -116,8 +116,10 @@ li .task-content {
 /* Style for delete task section */
 
 li .delete-task {
-    display: flex;
-    gap: 5px;
+
+    display: flex; 
+  
+    
 }
 
 
@@ -243,6 +245,8 @@ li .delete-task {
     .modalContent button:hover {
         background-color: #218838;
     }
+
+
 
 
 
