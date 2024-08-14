@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //Creating an event listener that listens for a click on the add task button. This will add a task to the task list
 
     addTaskBtn.addEventListener('click', function () {
-        const taskText = modalTaskInput.value;
+        const taskText = modalTaskInput.value.trim();
         const dueDate = mondalTaskDate.value;
         const status = modalTaskStatus.value;
 
@@ -60,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         }
+
+        //Need to improve this alert message
 
         else {
             alert('Please enter a task and due date');
@@ -93,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             taskItem.style.background = 'lightcoral';
         }
         else if (daysLeft >2 && daysLeft <7 && (status === 'backlog' || status === 'in-progress')) {
-            taskItem.style.background = 'lightyellow';
+            taskItem.style.background = 'lightsalmon';
         }
         else if (daysLeft >=7 && (status === 'backlog' || status === 'in-progress')) {
             taskItem.style.background = 'lightgreen';
