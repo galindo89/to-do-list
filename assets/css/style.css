@@ -242,6 +242,10 @@ li .delete-task {
 
     }
 
+    li .delete-task i:hover {
+       color: #dc3545;
+    }
+
     .modalContent button:hover {
         background-color: #218838;
     }
