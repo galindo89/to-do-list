@@ -93,8 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
         deleteTask.appendChild(deleteTaskSpan);
         taskItem.appendChild(deleteTask);
 
-        deleteTask.addEventListener('click', function () {
-            taskItem.remove();
+        deleteTaskSpan.addEventListener('click', function () {
+
+            // Remove the task from the list. This function is compatilbe with all browsers
+            taskItem.parentNode.removeChild(taskItem);
         });
         
         return taskItem;
