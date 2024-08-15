@@ -8,7 +8,7 @@
 
 /* Set a background color and font styles */
 body {
-    background:gray;
+    background:url(../images/black_image_with_stars.png) no-repeat center center fixed;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
