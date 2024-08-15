@@ -191,9 +191,16 @@ document.addEventListener('DOMContentLoaded', function () {
             addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
             statusSelect.style.display = 'none';
             saveTasksToLocalStorage();
+                   
            
-         
-           
+        });
+
+        statusSelect.addEventListener('blur', function () {
+            statusSpan.textContent = statusSelect.value;
+            statusSpan.style.display = 'inline-block';
+            statusSelect.style.display = 'none';
+            addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
+            saveTasksToLocalStorage();
         });
     
         //Event listener to delete the task
