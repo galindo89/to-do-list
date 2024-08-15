@@ -251,9 +251,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function addTaskToColumn(taskItem, status, duedate) {
         if (status === 'backlog') {
             document.getElementById('todoList').appendChild(taskItem);
+            changeTaskColor(taskItem, status, calculateDaysLeft(duedate));  
         }
         else if (status === 'in-progress') {
             document.getElementById('inProgressList').appendChild(taskItem);
+            changeTaskColor(taskItem, status, calculateDaysLeft(duedate));  
         }
         else if (status === 'done') {
             document.getElementById('doneList').appendChild(taskItem);
