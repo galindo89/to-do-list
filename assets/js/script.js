@@ -95,18 +95,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const daysLeft= calculateDaysLeft(dueDate);
 
+        changeTaskColor(taskItem, status, daysLeft);
+
         //Changing the background color of the task based on the number of days left to complete the task
 
-        if (daysLeft <=2 && (status === 'backlog' || status === 'in-progress')) {
-            taskItem.style.background = 'lightcoral';
-        }
-        else if (daysLeft >2 && daysLeft <7 && (status === 'backlog' || status === 'in-progress')) {
-            taskItem.style.background = 'lightsalmon';
-        }
-        else if (daysLeft >=7 && (status === 'backlog' || status === 'in-progress')) {
-            taskItem.style.background = 'lightgreen';
-        }
-
+      
         taskTextSpan.textContent = taskText;
         taskDueDateSpan.textContent = dueDate;
         statusSpan.textContent = status;
@@ -128,8 +121,33 @@ document.addEventListener('DOMContentLoaded', function () {
         return taskItem;
     }
 
-    //function to save the task to the local storage
+    
+    //function to load tasks from local storage
+    function loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.forEach(task => {
+            const taskItem = createTaskItem(task.text, task.dueDate, task.status);
+            addTaskToColumn(taskItem, task.status);
+        });
+    }
+  
 
+     
+     // Function to save tasks to local storage
+     function saveTasksToLocalStorage() {
+        const tasks = [];
+        document.querySelectorAll('.column ul li').forEach(taskItem => {
+            const taskContent = taskItem.querySelector('.task-content');
+            const text = taskContent.querySelector('span:nth-child(1)').textContent.trim();
+            const dueDate = taskContent.querySelector('span:nth-child(2)').textContent;
+            const status = taskContent.querySelector('span:nth-child(3)').textContent;
+            tasks.push({ text, dueDate, status });
+        });
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+
+   
 
     //Creating a function that will add a task to the correct column
 
@@ -163,29 +181,20 @@ document.addEventListener('DOMContentLoaded', function () {
         return daysLeft;
     }
 
-    //function to load tasks from local storage
-    function loadTasks() {
-        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        tasks.forEach(task => {
-            const taskItem = createTaskItem(task.text, task.dueDate, task.status);
-            addTaskToColumn(taskItem, task.status);
-        });
-    }
+    //function to change the background color of the task based on the number of days left to complete the task
 
-    
+    function changeTaskColor(taskItem, status, daysLeft) {
 
-     // Function to save tasks to local storage
-     // Function to save tasks to local storage
-     function saveTasksToLocalStorage() {
-        const tasks = [];
-        document.querySelectorAll('.column ul li').forEach(taskItem => {
-            const taskContent = taskItem.querySelector('.task-content');
-            const text = taskContent.querySelector('span:nth-child(1)').textContent.trim();
-            const dueDate = taskContent.querySelector('span:nth-child(2)').textContent;
-            const status = taskContent.querySelector('span:nth-child(3)').textContent;
-            tasks.push({ text, dueDate, status });
-        });
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        if (daysLeft <=2 && (status === 'backlog' || status === 'in-progress')) {
+            taskItem.style.background = 'lightcoral';
+        }
+        else if (daysLeft >2 && daysLeft <7 && (status === 'backlog' || status === 'in-progress')) {
+            taskItem.style.background = 'lightsalmon';
+        }
+        else if (daysLeft >=7 && (status === 'backlog' || status === 'in-progress')) {
+            taskItem.style.background = 'lightgreen';
+        }
+
     }
 
     
