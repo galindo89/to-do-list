@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const taskItem = createTaskItem(taskText, dueDate, status);
 
-            addTaskToColumn(taskItem, status);
+            addTaskToColumn(taskItem, status,dueDate);
             saveTasksToLocalStorage();
 
 
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
         statusSelect.addEventListener('change', function () {
             statusSpan.textContent = statusSelect.value;
             statusSpan.style.display = 'inline-block';
-            addTaskToColumn(taskItem, statusSelect.value);
+            addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
             statusSelect.style.display = 'none';
             saveTasksToLocalStorage();
            
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         tasks.forEach(task => {
             const taskItem = createTaskItem(task.text, task.dueDate, task.status);
-            addTaskToColumn(taskItem, task.status);
+            addTaskToColumn(taskItem, task.status, task.dueDate);
         });
     }
   
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //Creating a function that will add a task to the correct column
 
 
-    function addTaskToColumn(taskItem, status) {
+    function addTaskToColumn(taskItem, status, duedate) {
         if (status === 'backlog') {
             document.getElementById('todoList').appendChild(taskItem);
         }
@@ -250,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         else if (status === 'done') {
             document.getElementById('doneList').appendChild(taskItem);
+            changeTaskColor(taskItem, status, calculateDaysLeft(duedate));  
         }
 
         else {
@@ -282,6 +283,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         else if (daysLeft >=7 && (status === 'backlog' || status === 'in-progress')) {
             taskItem.style.background = 'lightgreen';
+        }
+        else if (status === 'done') {
+            taskItem.style.background = 'lightgrey';
+        }
+        else {
+            console.error('There has been an error changing the task color');
         }
 
     }
