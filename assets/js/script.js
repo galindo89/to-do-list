@@ -1,4 +1,6 @@
-console.log('Hello, world!');
+
+
+
 
 //Creating an event listener that loads when the whole page is loaded
 
@@ -144,13 +146,17 @@ document.addEventListener('DOMContentLoaded', function () {
        
         //Event listener to edit the task text
 
-        taskTextSpan.addEventListener('click', function () {
+
+
+       /*  taskTextSpan.addEventListener('click', function () {
 
             taskTextSpan.style.display = 'none';
             taskTextInput.style.display = 'inline-block';
             taskTextInput.focus();
            
-        })
+        }) */
+
+        editeventListenersTasks(taskTextSpan,taskTextInput,'click');
 
         taskTextInput.addEventListener('blur', function () {
             taskTextSpan.textContent = taskTextInput.value;
@@ -161,12 +167,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //Event listener to edit the due date
 
-        taskDueDateSpan.addEventListener('click', function () {
+      /*   taskDueDateSpan.addEventListener('click', function () {
 
             taskDueDateSpan.style.display = 'none';
             taskDueDateInput.style.display = 'inline-block';
             taskDueDateInput.focus();
         })
+ */
+        editeventListenersTasks(taskDueDateSpan,taskDueDateInput,'click');
 
         taskDueDateInput.addEventListener('blur', function () {
             taskDueDateSpan.textContent = taskDueDateInput.value;
@@ -178,12 +186,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //Event listener to edit the status
 
-        statusSpan.addEventListener('click', function () {
+     /*    statusSpan.addEventListener('click', function () {
 
             statusSpan.style.display = 'none';
             statusSelect.style.display = 'inline-block';
             statusSelect.focus();
-        });
+        }); */
+
+        editeventListenersTasks(statusSpan,statusSelect,'click');
 
         statusSelect.addEventListener('change', function () {
             statusSpan.textContent = statusSelect.value;
@@ -302,8 +312,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    
+    //function to manage event listeners
 
+    function editeventListenersTasks (htmlElementSpan,htmleElementInput,event){
+
+        htmlElementSpan.addEventListener(event,function(){
+
+            htmlElementSpan.style.display = 'none';
+            htmleElementInput.style.display = 'inline-block';
+            htmleElementInput.focus();
+
+
+
+
+
+
+        })
+
+
+
+
+    }
+
+
+
+
+    
        
 
 });
