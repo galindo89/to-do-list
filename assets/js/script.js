@@ -144,73 +144,52 @@ document.addEventListener('DOMContentLoaded', function () {
         taskItem.appendChild(deleteTask);
 
        
-        //Event listener to edit the task text
+        //Edit the task text
 
 
 
-       /*  taskTextSpan.addEventListener('click', function () {
+        editeventListenersTasks(taskTextSpan,taskTextSpan,taskTextInput,'click');
 
-            taskTextSpan.style.display = 'none';
-            taskTextInput.style.display = 'inline-block';
-            taskTextInput.focus();
-           
-        }) */
+     
+        createBlurEventListeners(taskTextSpan,taskTextInput,function(){
 
-        editeventListenersTasks(taskTextSpan,taskTextInput,'click');
-
-        taskTextInput.addEventListener('blur', function () {
-            taskTextSpan.textContent = taskTextInput.value;
-            taskTextSpan.style.display = 'inline-block';
-            taskTextInput.style.display = 'none';
+            
             saveTasksToLocalStorage();
-        });
-
-        //Event listener to edit the due date
-
-      /*   taskDueDateSpan.addEventListener('click', function () {
-
-            taskDueDateSpan.style.display = 'none';
-            taskDueDateInput.style.display = 'inline-block';
-            taskDueDateInput.focus();
         })
- */
-        editeventListenersTasks(taskDueDateSpan,taskDueDateInput,'click');
 
-        taskDueDateInput.addEventListener('blur', function () {
-            taskDueDateSpan.textContent = taskDueDateInput.value;
-            taskDueDateSpan.style.display = 'inline-block';
-            taskDueDateInput.style.display = 'none';
+        // edit the due date
+
+  
+
+        editeventListenersTasks(taskDueDateSpan,taskDueDateSpan,taskDueDateInput,'click');
+
+
+        createBlurEventListeners(taskDueDateSpan,taskDueDateInput,function(){
+
             changeTaskColor(taskItem, status, calculateDaysLeft(taskDueDateInput.value));
             saveTasksToLocalStorage();
-        });
+            
 
-        //Event listener to edit the status
+        })
 
-     /*    statusSpan.addEventListener('click', function () {
+        // edit status
 
-            statusSpan.style.display = 'none';
-            statusSelect.style.display = 'inline-block';
-            statusSelect.focus();
-        }); */
 
-        editeventListenersTasks(statusSpan,statusSelect,'click');
+        editeventListenersTasks(statusSpan,statusSpan,statusSelect,'click');
 
-        statusSelect.addEventListener('change', function () {
-            statusSpan.textContent = statusSelect.value;
-            statusSpan.style.display = 'inline-block';
-            addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
-            statusSelect.style.display = 'none';
-            saveTasksToLocalStorage();
-                   
-           
-        });
-
-        statusSelect.addEventListener('blur', function () {
-            statusSpan.textContent = statusSelect.value;
-            statusSpan.style.display = 'inline-block';
-            statusSelect.style.display = 'none';
+        editeventListenersTasks(statusSelect,statusSpan,statusSelect,'change',function(){
             addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
             saveTasksToLocalStorage();
+
+
+        });
+
+
+        createBlurEventListeners(statusSpan,statusSelect,function(){
+            addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
+            saveTasksToLocalStorage();
+
+
         });
     
         //Event listener to delete the task
@@ -314,25 +293,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //function to manage event listeners
 
-    function editeventListenersTasks (htmlElementSpan,htmleElementInput,event){
+    function editeventListenersTasks ( triggerElement,htmlElementSpan,htmlElementInput,event,callback){
 
-        htmlElementSpan.addEventListener(event,function(){
+        triggerElement.addEventListener(event,function(){
 
             htmlElementSpan.style.display = 'none';
-            htmleElementInput.style.display = 'inline-block';
-            htmleElementInput.focus();
-
-
-
-
-
+            htmlElementInput.style.display = 'inline-block';
+            htmlElementInput.focus();
+            if(callback){
+                callback()
+            }
 
         })
+    }
+
+    function createBlurEventListeners (htmlElementSpan,htmlElementInput,callback){
+
+        htmlElementInput.addEventListener('blur',function(){
+
+            htmlElementSpan.textContent=htmlElementInput.value;
+            htmlElementSpan.style.display='inline-block';
+            htmlElementInput.style.display='none'
+            
+                       
+
+            if(callback){
+
+                callback();
+            }
+
+          
 
 
+
+
+
+
+
+
+        });
 
 
     }
+    
+
+
+
+
+
+
+    
 
 
 
