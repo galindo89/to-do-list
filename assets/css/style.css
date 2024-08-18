@@ -140,6 +140,42 @@ li .delete-task {
     
 }
 
+/*Footer Section */
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    width: 100%;
+    position: fixed; /* Keeps the footer fixed at the bottom of the viewport */
+    bottom: 0;
+    left: 0;
+    z-index: 5; /* Ensure it sits above other content if needed */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the footer */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f9f9f9; /* Optional: change color on hover */
+}
+
+footer i {
+    font-size: 18px; /* Adjust icon size */
+    margin: 0 5px;
+}
+
+
+
 /* Style for the modal */
 
 .modal{
