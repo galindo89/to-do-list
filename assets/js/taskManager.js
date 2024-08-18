@@ -64,7 +64,6 @@ function createTaskItem(taskText, dueDate, status) {
 
     editeventListenersTasks(taskDueDateSpan, taskDueDateSpan, taskDueDateInput, 'click');
     createBlurEventListeners(taskDueDateSpan, taskDueDateInput, function() {
-        console.log("status:"+ status);
         changeTaskColor(taskItem, statusSelect.value, calculateDaysLeft(taskDueDateInput.value));
         saveTasksToLocalStorage();
     });
