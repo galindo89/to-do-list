@@ -122,27 +122,6 @@ li .delete-task {
     
 }
 
-
-
-/* Style for task status type */
-
-#todo{
-
-
-}
-
-#inProgress{}
-
-#done{}
-
-/* Style for the elements of the colums depending on the status*/
-
-#todoList{}
-
-#inProgressList{}
-
-#doneList{}
-
 /* Style for the modal */
 
 .modal{
