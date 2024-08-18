@@ -64,7 +64,8 @@ function createTaskItem(taskText, dueDate, status) {
 
     editeventListenersTasks(taskDueDateSpan, taskDueDateSpan, taskDueDateInput, 'click');
     createBlurEventListeners(taskDueDateSpan, taskDueDateInput, function() {
-        changeTaskColor(taskItem, status, calculateDaysLeft(taskDueDateInput.value));
+        console.log("status:"+ status);
+        changeTaskColor(taskItem, statusSelect.value, calculateDaysLeft(taskDueDateInput.value));
         saveTasksToLocalStorage();
     });
 
@@ -73,11 +74,12 @@ function createTaskItem(taskText, dueDate, status) {
     editeventListenersTasks(statusSpan, statusSpan, statusSelect, 'click');
     editeventListenersTasks(statusSelect, statusSpan, statusSelect, 'change', function() {
         addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
+        status=statusSelect.value;
         saveTasksToLocalStorage();
+      
     });
     createBlurEventListeners(statusSpan, statusSelect, function() {
-        addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
-        saveTasksToLocalStorage();
+       saveTasksToLocalStorage();
     });
 
     //Delete task
@@ -96,10 +98,13 @@ function addTaskToColumn(taskItem, status, dueDate) {
 
     if (status === 'backlog') {
         document.getElementById('todoList').appendChild(taskItem);
+       
     } else if (status === 'in-progress') {
         document.getElementById('inProgressList').appendChild(taskItem);
+       
     } else if (status === 'done') {
         document.getElementById('doneList').appendChild(taskItem);
+        
     } else {
         console.error('Error adding the task to the column');
     }

@@ -7,14 +7,23 @@ function calculateDaysLeft(dueDate) {
 }
 
 function changeTaskColor(taskItem, status, daysLeft) {
+
+    // Immediately set to lightgrey and exit if the status is 'done'
+
+    if (status === 'done') {
+        
+        taskItem.style.background = 'lightgrey';
+        return;
+    }
+
+
     if (daysLeft <= 2 && (status === 'backlog' || status === 'in-progress')) {
         taskItem.style.background = 'lightcoral';
     } else if (daysLeft > 2 && daysLeft < 7 && (status === 'backlog' || status === 'in-progress')) {
         taskItem.style.background = 'lightsalmon';
     } else if (daysLeft >= 7 && (status === 'backlog' || status === 'in-progress')) {
         taskItem.style.background = 'lightgreen';
-    } else if (status === 'done') {
-        taskItem.style.background = 'lightgrey';
+    
     } else {
         console.error('Error changing the task color');
     }
