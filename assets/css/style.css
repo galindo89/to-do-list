@@ -15,13 +15,35 @@ body {
     align-items: center;
     min-height: 100vh;
     margin:0;
-
     font-size: 16px;
     line-height: 1.5;
     color: #333;
+    background-color: black;
+    margin-top: 80px;
+    
 }
 
 /* Add additional styles for specific elements or classes as needed */
+
+
+/* Header Styles */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    padding-top: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px; /* Set a fixed height for the header */
+   
+    
+    
+}
+
 
 /* Container element */
 
@@ -127,7 +149,7 @@ li .delete-task {
 .modal{
    display: none;
     position: fixed;
-    z-index: 1; 
+    z-index: 100; 
     left: 0;
     top:0;
     width:100%;
