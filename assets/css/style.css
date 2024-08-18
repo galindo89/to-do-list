@@ -148,11 +148,10 @@ footer {
     text-align: center;
     padding: 2px 0;
     width: 100%;
-    position: fixed; /* Keeps the footer fixed at the bottom of the viewport */
+    position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 5; /* Ensure it sits above other content if needed */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the footer */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 footer p {
@@ -165,9 +164,6 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    color: #f9f9f9; /* Optional: change color on hover */
-}
 
 footer i {
     font-size: 18px; /* Adjust icon size */
@@ -282,6 +278,10 @@ footer i {
 
     li .delete-task i:hover {
         color: #dc3545;
+    }
+
+    footer a:hover {
+        color: #f9f9f9;
     }
     
 
