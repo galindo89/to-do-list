@@ -70,11 +70,30 @@ The main objective is to provide a simple, user-friendly interface that works se
 ### Colour Scheme
 The color scheme was chosen to create a professional and organized appearance, ensuring the user interface is clear and easy to navigate.
 
-- Primary Color: `#2D9CDB` (Buttons, Highlights)
-- Secondary Color: `#E6F7FF` (Background, Cards)
-- Accent Color: `#F2994A` (Status Indicators)
-- Background Color: `#F4F4F4` (Body Background)
-- Text Color: `#333333`
+- **Primary Colors:**
+  - **Background Image:** Black with stars.
+  - **Header and Footer Background:** `#343a40` (Dark Gray)
+  - **Body Background (Fallback):** `#000000` (Black)
+- **Text Colors:**
+  - **Primary Text Color:** `#ffffff` (White) - Used for header and footer text.
+  - **Body Text Color:** `#333333` (Dark Gray)
+- **Button Colors:**
+  - **Primary Button Background:** `#28a745` (Green)
+  - **Primary Button Hover Background:** `#218838` (Darker Green)
+- **List Item Background:**
+  - **List Items:** `#f9f9f9` (Light Gray)
+- **Due Date Based Colors:**
+  - **Tasks Due in More Than a Week:** `ligthcoral` (Light Coral)
+  - **Tasks Due in 2-7 Days:** `ligthsalmon` (Light Salmon Orange)
+  - **Tasks Due in Less Than 2 Days:** `lightgreen` (Light Green)
+- **Borders and Miscellaneous:**
+  - **Modal Background:** `rgba(0, 0, 0, 0.4)` (Semi-transparent Black)
+  - **Modal Content Background:** `#ffffff` (White)
+  - **Modal Content Border:** `#888888` (Gray)
+  - **Input Border:** `#cccccc` (Light Gray)
+  - **Close Button Color:** `#aaaaaa` (Gray)
+  - **Delete Task Icon Hover Color:** `#dc3545` (Red)
+  - **Footer Links Hover Color:** `#f9f9f9` (Light Gray)
 
 ### Typography
 For typography, a clean and modern font was chosen to ensure readability and a professional look.
@@ -164,13 +183,16 @@ To clone the repository:
 ### Feature Testing
 Comprehensive testing was conducted to ensure that all features function as expected. Each feature was tested on multiple devices and browsers to verify compatibility and responsiveness.
 
-| Feature            | Page         | Scenario                                                           | Steps                                             | Expected result                                                                                                                                                       | Result |
-| ------------------ | ------------ | ------------------------------------------------------------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Add Task           | Main         | User adds a new task                                               | Click "Add Task", enter details, and save         | Task appears in the To-Do column with the correct details.                                                                                                             | Passed |
-| Edit Task          | Main         | User edits an existing task                                        | Click on a task, update details, and save         | Task updates with new details without creating duplicates.                                                                                                             | Passed |
-| Delete Task        | Main         | User deletes a task                                                | Click the delete icon on a task                   | Task is removed from the list.                                                                                                                                         | Passed |
-| Change Status      | Main         | User changes the status of a task                                  | Click on a task's status                          | Task moves to the correct column (To-Do, In Progress, Done) based on the selected status.                                                                              | Passed |
-| Responsive Design  | All          | User accesses the site on different devices                        | Resize browser or test on different devices       | The layout adjusts appropriately for desktop, tablet, and mobile views.                                                                                                | Passed |
+| Feature                | Page  | Scenario                                                           | Steps                                             | Expected result                                                                                                                                                       | Result |
+|------------------------|-------|--------------------------------------------------------------------|---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| Open Modal             | Main  | User clicks "Create New Task" button                               | Click the "Create New Task" button                | A modal opens where the user can input task details including task name, due date, and status.                                                                        | Passed |
+| Add Task               | Main  | User adds a new task                                               | Click "Add Task", enter details, and save         | Task appears in the To-Do column with the correct details.                                                                                                             | Passed |
+| Edit Task              | Main  | User edits an existing task                                        | Click on a task, update details, and save         | Task updates with new details without creating duplicates.                                                                                                             | Passed |
+| Delete Task            | Main  | User deletes a task                                                | Click the delete icon on a task                   | Task is removed from the list.                                                                                                                                         | Passed |
+| Change Status          | Main  | User changes the status of a task                                  | Click on a task's status                          | Task moves to the correct column (To-Do, In Progress, Done) based on the selected status.                                                                              | Passed |
+| Due Date Color Change  | Main  | Task color changes based on due date                               | Add tasks with varying due dates                  | Tasks due in more than a week should have a light green background, tasks due in 2-7 days should have a light orange background, and tasks due in less than 2 days should have a light red background. | Passed |
+| Local Storage Save     | Main  | Tasks are saved in local storage                                   | Add tasks, refresh the page, and check local storage | After refreshing the page, the tasks should still be present as they are retrieved from local storage.                                                                  | Passed |
+| Responsive Design      | All   | User accesses the site on different devices                        | Resize browser or test on different devices       | The layout adjusts appropriately for desktop, tablet, and mobile views.                                                                                                | Passed |
 
 ### Browser Compatibility
 The project was tested across several modern browsers with no issues found.
