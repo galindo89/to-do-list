@@ -64,6 +64,7 @@ The main objective is to provide a simple, user-friendly interface that works se
 - As a user, I want to set due dates for tasks, so that I can manage deadlines effectively.
 - As a user, I want to track the status of tasks (To-Do, In Progress, Done), so that I can monitor my progress.
 - As a user, I want to access the application on multiple devices (desktop, tablet, mobile), so that I can manage my tasks on the go.
+- As a user, I want to be able to locally store my tasks in the browser using local storage, so that my tasks are saved even when I close and reopen the browser.
 
 ## Design
 ### Colour Scheme
