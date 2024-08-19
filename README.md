@@ -1,131 +1,259 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# To-Do List Application
 
-Welcome USER_NAME,
+![To-Do List Application](readme-docs/features/todo-list-mockup.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Visit the deployed site: [To-Do List App](https://galindo89.github.io/to-do-list-pgz/)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+A web-based To-Do List application designed to help users manage their tasks efficiently. The application features task creation, editing, status tracking, and due date management, with a responsive design for use across various devices.
 
-## Gitpod Reminders
+## CONTENTS
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [To-Do List Application](#to-do-list-application)
+  - [CONTENTS](#contents)
+  - [Introduction](#introduction)
+    - [Purpose of the project](#purpose-of-the-project)
+  - [User Experience (UX)](#user-experience-ux)
+    - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+    - [Features](#features)
+      - [Main Interface](#main-interface)
+      - [Task Management](#task-management)
+      - [Responsive Design](#responsive-design)
+      - [Future Implementations](#future-implementations)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
+  - [Deployment \& Local Development](#deployment--local-development)
+    - [Deployment](#deployment)
+    - [Local Development](#local-development)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+  - [Testing](#testing)
+    - [Feature Testing](#feature-testing)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Responsiveness Testing](#responsiveness-testing)
+    - [Code Validation](#code-validation)
+      - [HTML](#html)
+      - [CSS](#css)
+      - [JavaScript](#javascript)
+    - [Lighthouse Testing](#lighthouse-testing)
+    - [Bugs Documentation](#bugs-documentation)
+    - [Solved Bugs](#solved-bugs)
+    - [Known Bugs](#known-bugs)
+  - [Credits](#credits)
+    - [Code Used](#code-used)
+    - [Final Declaration of authenticity and credit](#final-declaration-of-authenticity-and-credit)
+    - [Media](#media)
+    - [Acknowledgments](#acknowledgments)
+    - [Contact](#contact)
 
-`python3 -m http.server`
+## Introduction
+### Purpose of the project
+The purpose of this project is to create a To-Do List application that allows users to manage their tasks efficiently. The application provides functionalities to add, edit, delete, and track the status of tasks, with features like due date management and task categorization.
 
-A blue button should appear to click: _Make Public_,
+The main objective is to provide a simple, user-friendly interface that works seamlessly across all devices, ensuring users can manage their tasks from anywhere, at any time.
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
+### User Stories
+- As a user, I want to add tasks to my to-do list, so that I can keep track of what needs to be done.
+- As a user, I want to edit existing tasks, so that I can update their details as needed.
+- As a user, I want to set due dates for tasks, so that I can manage deadlines effectively.
+- As a user, I want to track the status of tasks (To-Do, In Progress, Done), so that I can monitor my progress.
+- As a user, I want to access the application on multiple devices (desktop, tablet, mobile), so that I can manage my tasks on the go.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## Design
+### Colour Scheme
+The color scheme was chosen to create a professional and organized appearance, ensuring the user interface is clear and easy to navigate.
 
-A blue button should appear to click: _Make Public_,
+- Primary Color: `#2D9CDB` (Buttons, Highlights)
+- Secondary Color: `#E6F7FF` (Background, Cards)
+- Accent Color: `#F2994A` (Status Indicators)
+- Background Color: `#F4F4F4` (Body Background)
+- Text Color: `#333333`
 
-Another blue button should appear to click: _Open Browser_.
+### Typography
+For typography, a clean and modern font was chosen to ensure readability and a professional look.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- 'Roboto', sans-serif for all text, providing a modern and clean appearance.
 
-To log into the Heroku toolbelt CLI:
+### Imagery
+Imagery is minimal to maintain focus on task management. The background is a subtle space-themed image that provides a visually appealing backdrop without distracting from the content.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Wireframes
+Wireframes were created to plan the layout and user flow for the application. Below are examples of the wireframes for different devices:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+![Main Interface Desktop](readme-docs/wireframes/wireframe-main-desktop.jpg)
+![Main Interface Mobile](readme-docs/wireframes/wireframe-main-mobile.jpg)
 
-### Connecting your Mongo database
+### Features
+The application is designed to be intuitive and efficient, providing users with all the tools they need to manage their tasks.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+#### Main Interface
+The main interface displays tasks organized into three columns: To-Do, In Progress, and Done. Users can easily move tasks between these columns by updating their status.
 
-------
+![Main Interface](readme-docs/features/main-interface.JPG)
 
-## Release History
+#### Task Management
+Tasks can be added, edited, and deleted. Each task includes a description, due date, and status. The status can be updated by clicking on the task, and the task's appearance changes based on its due date to help users prioritize.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Task Management](readme-docs/features/task-management.JPG)
 
-**June 18, 2024,** Add Mongo back into template
+#### Responsive Design
+The application is fully responsive, ensuring a consistent experience across all devices, whether on a desktop, tablet, or mobile device.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+![Responsive Design](readme-docs/features/responsive-design.JPG)
 
-**May 28 2024:** Fix Mongo and Links installs
+#### Future Implementations
+Future enhancements may include:
 
-**April 26 2024:** Update node version to 16
+1. Adding priority levels to tasks for better management.
+2. Implementing drag-and-drop functionality for moving tasks between columns.
+3. Adding user authentication to allow for personalized task lists.
 
-**September 20 2023:** Update Python version to 3.9.17.
+## Technologies Used
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Languages Used
+- HTML5
+- CSS3
+- JavaScript
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Frameworks, Libraries & Programs Used
+- [Git](https://git-scm.com/) - For version control.
+- [GitHub](https://github.com/) - To host and deploy the website.
+- [Google Fonts](https://fonts.google.com/) - To import the 'Roboto' font.
+- [Font Awesome](https://fontawesome.com/) - For icons used in the application.
+- [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) - For creating mockups of the application across devices.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Deployment & Local Development
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Deployment
+The site is deployed using GitHub Pages: [To-Do List App](https://your-deployed-url.com).
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+To deploy the site using GitHub Pages:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+1. Log in to GitHub.
+2. Go to the repository for this project.
+3. Click the settings button.
+4. Select pages in the left-hand navigation menu.
+5. From the source dropdown, select the main branch and press save.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Local Development
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### How to Fork
+To fork the repository:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. Log in to GitHub.
+2. Go to the repository for this project.
+3. Click the Fork button in the top right corner.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### How to Clone
+To clone the repository:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. Log in to GitHub.
+2. Go to the repository for this project.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Testing
+### Feature Testing
+Comprehensive testing was conducted to ensure that all features function as expected. Each feature was tested on multiple devices and browsers to verify compatibility and responsiveness.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+| Feature            | Page         | Scenario                                                           | Steps                                             | Expected result                                                                                                                                                       | Result |
+| ------------------ | ------------ | ------------------------------------------------------------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Add Task           | Main         | User adds a new task                                               | Click "Add Task", enter details, and save         | Task appears in the To-Do column with the correct details.                                                                                                             | Passed |
+| Edit Task          | Main         | User edits an existing task                                        | Click on a task, update details, and save         | Task updates with new details without creating duplicates.                                                                                                             | Passed |
+| Delete Task        | Main         | User deletes a task                                                | Click the delete icon on a task                   | Task is removed from the list.                                                                                                                                         | Passed |
+| Change Status      | Main         | User changes the status of a task                                  | Click on a task's status                          | Task moves to the correct column (To-Do, In Progress, Done) based on the selected status.                                                                              | Passed |
+| Responsive Design  | All          | User accesses the site on different devices                        | Resize browser or test on different devices       | The layout adjusts appropriately for desktop, tablet, and mobile views.                                                                                                | Passed |
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Browser Compatibility
+The project was tested across several modern browsers with no issues found.
 
-------
+| Browser tested | Appearance | Responsiveness | Comment         |
+| -------------- | ---------- | -------------- | --------------- |
+| Chrome         | Good       | Good           | No issues found |
+| Firefox        | Good       | Good           | No issues found |
+| Edge           | Good       | Good           | No issues found |
 
-## FAQ about the uptime script
+### Responsiveness Testing
+The application was tested on various devices to ensure responsiveness.
 
-**Why have you added this script?**
+| Device tested  | Site responsiveness <= 767px                     | Site responsiveness 768px <= x <= 991px | Site responsiveness x >= 992px            |
+| -------------- | ------------------------------------------------ | --------------------------------------- | ---------------------------------------- |
+| Google Pixel 7 | Good. All pages rendered correctly                | N/A                                     | N/A                                      |
+| iPad Mini      | N/A                                              | Good. All pages rendered correctly      | N/A                                      |
+| Desktop        | N/A                                              | N/A                                     | Good. All pages rendered correctly       |
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Code Validation
+#### HTML
+HTML code validation was conducted using the [W3C Markup Validation Service](https://validator.w3.org/).
 
-**How will this affect me?**
+| Page Tested | Errors                                                                                                         | Solutions applied?                                        | Screenshot of clear validator output                                |
+| ----------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------- |
+| index.html  |None || ![index.html validation result](readme-docs/testing/index-html.JPG) |
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### CSS
+CSS code was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator).
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+| File      | Errors                                                                 | Solutions applied?                               | Screenshot of clear validator output                              |
+| --------- | ---------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------- |
+| style.css |None || ![style.css validation result](readme-docs/testing/style-css.JPG)  |
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+#### JavaScript
+CSS code was validated using the [JSHiint JavaScript online validation tool](https://jshint.com/).
 
-**So….?**
+| File      | Errors                                                                 | Solutions applied?                               | Screenshot of clear validator output                              |
+| --------- | ---------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------- |
+| initializeApp.js |  || ![initializeApp.js validation result](readme-docs/testing/initializeApp-js-test.JPG)  |
+| storage.js |  || ![storage.js validation result](readme-docs/testing/storage-js-test.JPG)  |
+| taskManager.js |  || ![taskManager.js validation result](readme-docs/testing/taskManager-js-test.JPG)  |
+| utils.js |  || ![utils.js validation result](readme-docs/testing/utils-js-test.JPG)  |
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Lighthouse Testing
+Lighthouse testing was conducted using Chrome's developer tools to assess performance, accessibility, SEO, and best practices.
 
-**Can I opt out?**
+- Mobile results: ![Lighthouse Mobile Results](readme-docs/testing/lighthouse-mobile.JPG)
+- Desktop results: ![Lighthouse Desktop Results](readme-docs/testing/lighthouse-desktop.JPG)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Bugs Documentation
+During development and testing, several bugs were identified and resolved. The table below outlines the bugs and their resolutions.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+| Bug                                                        | Solution                                                                                  | Status             |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------ |
+| Modal not closing when clicking outside                    | Added event listener to close the modal when clicking outside the modal content.          | Fixed and deployed |
+| Task color not updating after changing due date            | Updated the logic to reapply color coding based on the new due date after editing a task. | Fixed and deployed |
+| Task status not saving in local storage after change       | Corrected the save logic to ensure status updates are reflected in local storage.         | Fixed and deployed |
 
-**Anything more?**
+### Solved Bugs
+See above.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Known Bugs
+There are currently no known bugs. All identified issues have been resolved as of the last update.
 
----
+## Credits
+### Code Used
+The code for this project was developed by the author, with inspiration from various online tutorials and resources. Key concepts were drawn from:
 
-Happy coding!
+1. Flexbox layout guides.
+2. JavaScript task management examples.
+3. CSS styling tips for responsive design.
+
+### Final Declaration of authenticity and credit
+I declare that this README and the associated code are my original work. Any references to external sources have been properly credited.
+
+### Media
+Background image sourced from a generated image via [DALL·E](https://openai.com/dall-e). Icons sourced from Font Awesome.
+
+### Acknowledgments
+
+1. Thanks to my tutor for their guidance throughout this project.
+2. Gratitude to the Code Institute community for their support and helpful resources.
+3. Special thanks to [Slaying The Dragon](https://www.youtube.com/@slayingthedragon) for their excellent CSS tutorials, which were instrumental in developing this project.
+
+### Contact
+For more information, please contact [your.email@example.com].

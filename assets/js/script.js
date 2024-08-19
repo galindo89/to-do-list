@@ -301,10 +301,10 @@ document.addEventListener('DOMContentLoaded',initializeApp)
           htmlElementInput.style.display = 'inline-block';
           htmlElementInput.focus();
           if (callback) {
-             callback()
+             callback();
           }
  
-       })
+       });
     }
  
     function createBlurEventListeners(htmlElementSpan, htmlElementInput, callback) {
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded',initializeApp)
  
           htmlElementSpan.textContent = htmlElementInput.value;
           htmlElementSpan.style.display = 'inline-block';
-          htmlElementInput.style.display = 'none'
+          htmlElementInput.style.display = 'none';
  
  
           if (callback) {
