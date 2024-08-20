@@ -232,10 +232,10 @@ CSS code was validated using the [JSHiint JavaScript online validation tool](htt
 
 | File      | Errors                                                                 | Solutions applied?                               | Screenshot of clear validator output                              |
 | --------- | ---------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------- |
-| initializeApp.js |  || ![initializeApp.js validation result](readme-docs/testing/initializeApp-js-test.JPG)  |
-| storage.js |  || ![storage.js validation result](readme-docs/testing/storage-js-test.JPG)  |
-| taskManager.js |  || ![taskManager.js validation result](readme-docs/testing/taskManager-js-test.JPG)  |
-| utils.js |  || ![utils.js validation result](readme-docs/testing/utils-js-test.JPG)  |
+| initializeApp.js |  || No errors identified by JSHint during the validation of the js code.  |
+| storage.js |  || No errors identified by JSHint during the validation of the js code. |
+| taskManager.js |  || No errors identified by JSHint during the validation of the js code. |
+| utils.js |  || No errors identified by JSHint during the validation of the js code.  |
 
 ### Lighthouse Testing
 Lighthouse testing was conducted using Chrome's developer tools to assess performance, accessibility, SEO, and best practices.
@@ -267,18 +267,24 @@ The code for this project was developed by the author, with inspiration from var
 1. Flexbox layout guides.
 2. JavaScript task management examples.
 3. CSS styling tips for responsive design.
+4. JSDoc for documenting the js functions
 
 ### Final Declaration of authenticity and credit
 I declare that this README and the associated code are my original work. Any references to external sources have been properly credited.
 
 ### Media
-Background image sourced from a generated image via [DALL·E](https://openai.com/dall-e). Icons sourced from Font Awesome. Favicon generated via [WEBWIZARD](https://webwizard.ie/favicon/from-text/).
+Background image sourced from a generated image via [DALL·E](https://openai.com/dall-e).  
+Icons sourced from Font Awesome.  
+Favicon generated via [WEBWIZARD](https://webwizard.ie/favicon/from-text/).
 
 ### Acknowledgments
 
 1. Thanks to my tutor for their guidance throughout this project.
 2. Gratitude to the Code Institute community for their support and helpful resources.
 3. Special thanks to [Slaying The Dragon](https://www.youtube.com/@slayingthedragon) for their excellent CSS tutorials, which were instrumental in developing this project.
+4. Thanks to W3Schools for their tutorial on creating a modal. For more information, check this [link](https://www.w3schools.com/howto/howto_css_modals.asp).
+5. Thanks to Stack Overflow for helping me solve several issues I faced during the implementation. For example, they helped me figure out how to implement the function to calculate the days left. For more information, check this [link](https://stackoverflow.com/questions/35987262/difference-in-days-between-two-days-in-yyyy-mm-dd-format).
 
+   
 ### Contact
-For more information, please contact [your.email@example.com].
+For more information, please contact [pablo.galindozapata@gmail.com].

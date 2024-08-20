@@ -1,26 +1,24 @@
-
 /* Reset default styles */
 * {
     margin: 0;
     padding: 0;
-   
 }
 
 /* Set a background color and font styles */
+
 body {
-    background:url(../images/black_image_with_stars.png) no-repeat center center fixed;
+    background: url(../images/black_image_with_stars.png) no-repeat center center fixed;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin:0;
+    margin: 0;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
     background-color: black;
     margin-top: 80px;
-    
 }
 
 
@@ -35,27 +33,21 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px; /* Set a fixed height for the header */
-     
-    
+    height: 60px;
 }
-
 
 /* Container element */
 
 .container {
-
     width: 90%;
     max-width: 1200px;
     margin: 20px;
     margin-bottom: 100px;
-    
-        
 }
+
 /* Style for create task button */
 
-#createTaskBtn{
-
+#createTaskBtn {
     padding: 20px;
     background-color: #28a745;
     color: white;
@@ -67,57 +59,47 @@ header {
     width: 100%;
     font-size: 16px;
     width: auto;
-
-
 }
 
-
 /* Style for colums section */
-
 
 .columns {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-    
 }
 
 /* Style for column element */
 
 .column {
-
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin:0 10px;
+    margin: 0 10px;
     margin-bottom: 20px;
     width: 80%;
-   
 }
 
 /* Style for column title */
 
-.column h2{
+.column h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
 /* Style for list element */
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-li{
+li {
     background-color: #f9f9f9;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
-
-    /*this may not be necessary*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,10 +115,7 @@ li .task-content {
 /* Style for delete task section */
 
 li .delete-task {
-
-    display: flex; 
-  
-    
+    display: flex;
 }
 
 /*Footer Section */
@@ -150,7 +129,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
@@ -165,12 +144,11 @@ footer a {
 
 
 footer i {
-    font-size: 18px; 
+    font-size: 18px;
     margin: 0 5px;
 }
 
 .copy-right {
-
     font-size: small;
 }
 
@@ -178,22 +156,21 @@ footer i {
 
 /* Style for the modal */
 
-.modal{
-   display: none;
+.modal {
+    display: none;
     position: fixed;
-    z-index: 100; 
+    z-index: 100;
     left: 0;
-    top:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); 
-    
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modalContent{
+.modalContent {
     background-color: white;
-    margin: 10% auto; 
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 90%;
@@ -203,25 +180,25 @@ footer i {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
 }
 
-.modalContent label{
+.modalContent label {
     font-weight: bold;
     margin-top: 10px;
 }
 
 .close {
-        color: #aaa;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        font-size: 28px;
-        font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.modalContent input,  .modalContent select {
-   
+.modalContent input,
+.modalContent select {
+
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -239,9 +216,6 @@ footer i {
     margin-top: 20px;
 }
 
-
-
-
 /* Style for table screen sizes */
 
 @media (min-width: 481px) {
@@ -256,25 +230,22 @@ footer i {
     .columns {
         flex-direction: row;
         justify-content: space-between;
-        flex-wrap: nowrap; /* Prevent wrapping */
+        flex-wrap: nowrap;
     }
 
     #createTaskBtn:hover {
         background-color: #218838;
     }
-    
 
     .column {
         width: 30%;
-        margin: 0 10px; /* Add margin on left and right */
+        margin: 0 10px;
     }
 
-    .close:hover{
+    .close:hover {
         color: black;
-        
 
     }
-
 
     .modalContent button:hover {
         background-color: #218838;
@@ -287,17 +258,4 @@ footer i {
     footer a:hover {
         color: #f9f9f9;
     }
-    
-
-
-
-
-
-
 }
-
-
-
-
-
-

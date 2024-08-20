@@ -4,15 +4,10 @@
  * and handling modal interactions for task creation.
  */
 
-
 function initializeApp() {
-    
-    console.log('The page is fully loaded');
 
-    // Load tasks from local storage
     loadTasks();
 
-   
     const createTaskBtn = document.getElementById('createTaskBtn');
     const modal = document.getElementById('modal');
     const closeModal = document.getElementById('closeModal');
@@ -21,12 +16,12 @@ function initializeApp() {
     const mondalTaskDate = document.getElementById('modalTaskDate');
     const modalTaskStatus = document.getElementById('modalTaskStatus');
 
-    
+
     // Event listeners for the modal and task creation
 
     createTaskBtn.addEventListener('click', () => modal.style.display = 'block');
     closeModal.addEventListener('click', () => modal.style.display = 'none');
-    
+
     window.addEventListener('click', event => {
         if (event.target === modal) modal.style.display = 'none';
     });
@@ -50,3 +45,7 @@ function initializeApp() {
         }
     });
 }
+
+// Initialize the application when the DOM is fully loaded
+
+document.addEventListener('DOMContentLoaded', initializeApp);
