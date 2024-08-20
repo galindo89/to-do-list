@@ -106,8 +106,8 @@ Imagery is minimal to maintain focus on task management. The background is a sub
 ### Wireframes
 Wireframes were created to plan the layout and user flow for the application. Below are examples of the wireframes for different devices:
 
-![Main Interface Desktop](readme-docs/wireframes/wireframe-main-desktop.jpg)
-![Main Interface Mobile](readme-docs/wireframes/wireframe-main-mobile.jpg)
+![Main Interface Desktop](readme-docs/wireframes/wireframe-main-desktop.JPG)
+![Main Interface Mobile](readme-docs/wireframes/wireframe-main-mobile.JPG)
 
 ### Features
 The application is designed to be intuitive and efficient, providing users with all the tools they need to manage their tasks.
