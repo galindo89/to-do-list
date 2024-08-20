@@ -1,3 +1,8 @@
+
+/**
+ * Loads tasks from local storage and adds them to the appropriate columns.
+ */
+
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => {
@@ -5,6 +10,10 @@ function loadTasks() {
         addTaskToColumn(taskItem, task.status, task.dueDate);
     });
 }
+
+/**
+ * Saves all tasks to local storage.
+ */
 
 function saveTasksToLocalStorage() {
     const tasks = [];

@@ -272,7 +272,7 @@ The code for this project was developed by the author, with inspiration from var
 I declare that this README and the associated code are my original work. Any references to external sources have been properly credited.
 
 ### Media
-Background image sourced from a generated image via [DALL·E](https://openai.com/dall-e). Icons sourced from Font Awesome.
+Background image sourced from a generated image via [DALL·E](https://openai.com/dall-e). Icons sourced from Font Awesome. Favicon generated via [WEBWIZARD](https://webwizard.ie/favicon/from-text/).
 
 ### Acknowledgments
 

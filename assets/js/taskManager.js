@@ -6,7 +6,7 @@
  *
  * @param {string} taskText - The text of the task.
  * @param {string} dueDate - The due date of the task in YYYY-MM-DD format.
- * @param {string} status - The status of the task ('backlog', 'in-progress', or 'done').
+ * @param {string} status - The status of the task for example, 'backlog', 'in-progress'and 'done'.
  * @returns {HTMLElement} The task item element.
  */
 
@@ -111,6 +111,14 @@ function createTaskItem(taskText, dueDate, status) {
 
     return taskItem;
 }
+
+/**
+ * Adds a task item to the appropriate column based on its status.
+ *
+ * @param {HTMLElement} taskItem - The task item element to be added.
+ * @param {string} status - The status of the task for example, 'backlog', 'in-progress'and 'done'.
+ * @param {string} dueDate - The due date of the task in YYYY-MM-DD format.
+ */
 
 function addTaskToColumn(taskItem, status, dueDate) {
     const daysLeft = calculateDaysLeft(dueDate);

@@ -6,12 +6,13 @@
 
 
 function initializeApp() {
+    
     console.log('The page is fully loaded');
 
     // Load tasks from local storage
     loadTasks();
 
-    // Event listeners for the modal and task creation
+   
     const createTaskBtn = document.getElementById('createTaskBtn');
     const modal = document.getElementById('modal');
     const closeModal = document.getElementById('closeModal');
@@ -19,6 +20,9 @@ function initializeApp() {
     const modalTaskInput = document.getElementById('modalTaskInput');
     const mondalTaskDate = document.getElementById('modalTaskDate');
     const modalTaskStatus = document.getElementById('modalTaskStatus');
+
+    
+    // Event listeners for the modal and task creation
 
     createTaskBtn.addEventListener('click', () => modal.style.display = 'block');
     closeModal.addEventListener('click', () => modal.style.display = 'none');
