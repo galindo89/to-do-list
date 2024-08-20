@@ -251,6 +251,8 @@ During development and testing, several bugs were identified and resolved. The t
 | Modal not closing when clicking outside                    | Added event listener to close the modal when clicking outside the modal content.          | Fixed and deployed |
 | Task color not updating after changing due date            | Updated the logic to reapply color coding based on the new due date after editing a task. | Fixed and deployed |
 | Task status not saving in local storage after change       | Corrected the save logic to ensure status updates are reflected in local storage.         | Fixed and deployed |
+| When changing status, the select dropdown remains active in Firefox browser | Updated event listeners and functions to properly deactivate the select dropdown after the "click" event. | Fixed and deployed |
+
 
 ### Solved Bugs
 See above.

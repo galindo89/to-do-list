@@ -74,11 +74,18 @@ function createTaskItem(taskText, dueDate, status) {
     editeventListenersTasks(statusSelect, statusSpan, statusSelect, 'change', function() {
         addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
         status=statusSelect.value;
+        console.log("Status from click:"+status);
+        statusSpan.textContent = statusSelect.value;
+        statusSpan.style.display = 'inline-block';
+        statusSelect.style.display = 'none';
         saveTasksToLocalStorage();
+               
       
     });
     createBlurEventListeners(statusSpan, statusSelect, function() {
-       saveTasksToLocalStorage();
+        status=statusSelect.value;
+        console.log("Status from Blur:"+status);
+        saveTasksToLocalStorage();
     });
 
     //Delete task
