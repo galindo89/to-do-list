@@ -208,9 +208,9 @@ The application was tested on various devices to ensure responsiveness.
 
 | Device tested  | Site responsiveness <= 767px                     | Site responsiveness 768px <= x <= 991px | Site responsiveness x >= 992px            |
 | -------------- | ------------------------------------------------ | --------------------------------------- | ---------------------------------------- |
-| Google Pixel 7 | Good. All pages rendered correctly                | N/A                                     | N/A                                      |
-| iPad Mini      | N/A                                              | Good. All pages rendered correctly      | N/A                                      |
-| Desktop        | N/A                                              | N/A                                     | Good. All pages rendered correctly       |
+| Google Pixel 7 | Good. App rendered correctly                | N/A                                     | N/A                                      |
+| iPad Mini      | N/A                                              | Good. App rendered correctly       | N/A                                      |
+| Desktop        | N/A                                              | N/A                                     | Good. App rendered correctly        |
 
 ### Code Validation
 #### HTML
