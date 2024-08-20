@@ -1,3 +1,17 @@
+/**
+ * Creates a new task item element.
+ *
+ * This function creates the necessary HTML elements for a task item, sets up
+ * event listeners for editing and deleting the task, and returns the task item element.
+ *
+ * @param {string} taskText - The text of the task.
+ * @param {string} dueDate - The due date of the task in YYYY-MM-DD format.
+ * @param {string} status - The status of the task ('backlog', 'in-progress', or 'done').
+ * @returns {HTMLElement} The task item element.
+ */
+
+
+
 function createTaskItem(taskText, dueDate, status) {
     const taskItem = document.createElement('li');
     const taskContent = document.createElement('div');
