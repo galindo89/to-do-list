@@ -1,10 +1,9 @@
 /**
  * Calculates the number of days left until the tasks due date.
- *
+ * 
  * @param {string} dueDate - The due date of the task in YYYY-MM-DD format.
  * @returns {number} The number of days left until the due date.
  */
-
 function calculateDaysLeft(dueDate) {
     const currentDate = new Date();
     const dueDateArray = dueDate.split('-');
@@ -20,26 +19,24 @@ function calculateDaysLeft(dueDate) {
  * @param {string} status - The status of the task for example, 'backlog', 'in-progress'and 'done'.
  * @param {number} daysLeft - The number of days left until the task's due date.
  */
-
 function changeTaskColor(taskItem, status, daysLeft) {
 
     // Immediately set to lightgrey and exit if the status is 'done'
 
-    if (status === 'done') {
-        
+    if (status === 'done') {                
         taskItem.style.background = 'lightgrey';
         return;
-    }
-
-
+    }    
     if (daysLeft <= 2 && (status === 'backlog' || status === 'in-progress')) {
         taskItem.style.background = 'lightcoral';
-    } else if (daysLeft > 2 && daysLeft < 7 && (status === 'backlog' || status === 'in-progress')) {
+    } 
+    else if (daysLeft > 2 && daysLeft < 7 && (status === 'backlog' || status === 'in-progress')) {
         taskItem.style.background = 'lightsalmon';
-    } else if (daysLeft >= 7 && (status === 'backlog' || status === 'in-progress')) {
-        taskItem.style.background = 'lightgreen';
-    
-    } else {
+    } 
+    else if (daysLeft >= 7 && (status === 'backlog' || status === 'in-progress')) {
+        taskItem.style.background = 'lightgreen';    
+    } 
+    else {
         console.error('Error changing the task color');
     }
 }
@@ -53,7 +50,6 @@ function changeTaskColor(taskItem, status, daysLeft) {
  * @param {string} event - The event type to listen for example, 'click'or 'change'.
  * @param {Function} [callback] - Optional callback function to execute after the event.
  */
-
 function editeventListenersTasks(triggerElement, htmlElementSpan, htmlElementInput, event, callback) {
     triggerElement.addEventListener(event, () => {
         htmlElementSpan.style.display = 'none';
@@ -71,7 +67,6 @@ function editeventListenersTasks(triggerElement, htmlElementSpan, htmlElementInp
  * @param {HTMLElement} htmlElementInput - The input element to hide.
  * @param {Function} callback - The function to call after the blur event.
  */
-
 function createBlurEventListeners(htmlElementSpan, htmlElementInput, callback) {
     htmlElementInput.addEventListener('blur', () => {
         htmlElementSpan.textContent = htmlElementInput.value;

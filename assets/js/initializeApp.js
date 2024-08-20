@@ -1,9 +1,7 @@
-
 /**
  * Initializes the application by setting up event listeners, loading tasks from local storage,
  * and handling modal interactions for task creation.
  */
-
 function initializeApp() {
 
     loadTasks();

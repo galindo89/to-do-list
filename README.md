@@ -232,10 +232,10 @@ CSS code was validated using the [JSHiint JavaScript online validation tool](htt
 
 | File      | Errors                                                                 | Solutions applied?                               | Screenshot of clear validator output                              |
 | --------- | ---------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------- |
-| initializeApp.js |  || No errors identified by JSHint during the validation of the js code.  |
-| storage.js |  || No errors identified by JSHint during the validation of the js code. |
-| taskManager.js |  || No errors identified by JSHint during the validation of the js code. |
-| utils.js |  || No errors identified by JSHint during the validation of the js code.  |
+| initializeApp.js | No errors identified by JSHint during the validation of the js code. || ![initializeApp.js validation result](readme-docs/testing/initializeApp-js-test.JPG)  |
+| storage.js | No errors identified by JSHint during the validation of the js code. || ![storage.js validation result](readme-docs/testing/storage-js-test.JPG) |
+| taskManager.js | No errors identified by JSHint during the validation of the js code. || ![taskManager.js validation result](readme-docs/testing/taskManager-js-test.JPG) |
+| utils.js | No errors identified by JSHint during the validation of the js code. || ![utils.js validation result](readme-docs/testing/utils-js-test.JPG) |
 
 ### Lighthouse Testing
 Lighthouse testing was conducted using Chrome's developer tools to assess performance, accessibility, SEO, and best practices.
@@ -267,7 +267,8 @@ The code for this project was developed by the author, with inspiration from var
 1. Flexbox layout guides.
 2. JavaScript task management examples.
 3. CSS styling tips for responsive design.
-4. JSDoc for documenting the js functions
+4. JSDoc for documenting the js functions.
+5. MDN Web Docs for arrow functions and using local storage.
 
 ### Final Declaration of authenticity and credit
 I declare that this README and the associated code are my original work. Any references to external sources have been properly credited.

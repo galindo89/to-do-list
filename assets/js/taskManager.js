@@ -9,9 +9,6 @@
  * @param {string} status - The status of the task for example, 'backlog', 'in-progress'and 'done'.
  * @returns {HTMLElement} The task item element.
  */
-
-
-
 function createTaskItem(taskText, dueDate, status) {
     const taskItem = document.createElement('li');
     const taskContent = document.createElement('div');
@@ -88,7 +85,6 @@ function createTaskItem(taskText, dueDate, status) {
     editeventListenersTasks(statusSelect, statusSpan, statusSelect, 'change', function() {
         addTaskToColumn(taskItem, statusSelect.value, taskDueDateInput.value);
         status=statusSelect.value;
-        console.log("Status from click:"+status);
         statusSpan.textContent = statusSelect.value;
         statusSpan.style.display = 'inline-block';
         statusSelect.style.display = 'none';
@@ -98,7 +94,6 @@ function createTaskItem(taskText, dueDate, status) {
     });
     createBlurEventListeners(statusSpan, statusSelect, function() {
         status=statusSelect.value;
-        console.log("Status from Blur:"+status);
         saveTasksToLocalStorage();
     });
 
@@ -119,7 +114,6 @@ function createTaskItem(taskText, dueDate, status) {
  * @param {string} status - The status of the task for example, 'backlog', 'in-progress'and 'done'.
  * @param {string} dueDate - The due date of the task in YYYY-MM-DD format.
  */
-
 function addTaskToColumn(taskItem, status, dueDate) {
     const daysLeft = calculateDaysLeft(dueDate);
     changeTaskColor(taskItem, status, daysLeft);
@@ -134,6 +128,6 @@ function addTaskToColumn(taskItem, status, dueDate) {
         document.getElementById('doneList').appendChild(taskItem);
         
     } else {
-        console.error('Error adding the task to the column');
+        alert('Error adding the task to the column');
     }
 }
